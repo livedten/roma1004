@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список имен</title>
+</head>
+<body>
+    <h1>Список имен</h1>
+    <a href='{% url "add" %}'>Добавить имя</a>
+    {% for myproject in object_list %}
+        <p>{{ myproject.name }}</p>
+    {% endfor %}
+</body>
+</html>
