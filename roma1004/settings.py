@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-li*e^xymn%h**l&rl_r6d3t3r^z_2@+^*%fq6_=md+w(w$rqml
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'roma1004.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'myproject',
-        'USER': 'myprojectuser',
+        'NAME': 'myproject_db',
+        'USER': 'livedten',
         'PASSWORD': 'password',
         'HOST': 'localhost',
-        'PORT': '',
+        'PORT': '5432',
     }
 }
 

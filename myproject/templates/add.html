@@ -2,20 +2,20 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Добавить имя</title>
+    <title>Добавить данные</title>
 </head>
 <body>
-    <h1>Добавить новое имя</h1>
+    <h1>Добавить новые данные</h1>
     <form id="form-container" method="POST">
         {% csrf_token %}
         {{ formset.management_form }}
         {% for form in formset %}
             <div class="myproject-form">
-                {{form.as_p}}
+                {{ form.as_p }}
             </div>
         {% endfor %}
-        <button id="add-form" type="button">Добавить еще одно имя</button>
-        <button type="submit">Создать имена</button>
+        <button id="add-form" type="button">Добавить еще одну форму</button>
+        <button type="submit">Создать данные</button>
     </form>
 
 

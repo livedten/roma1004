@@ -19,7 +19,7 @@ class MyProjectTemplateView(TemplateView):
 
     def get(self, *args, **kwargs):
         formset = MyProjectFormSet(queryset=MyProject.objects.none())
-        return self.render_to_response({'formset': formset})
+        return self.render_to_response({"formset": formset})
 
     def post(self, *args, **kwargs):
         formset = MyProjectFormSet(data=self.request.POST)
@@ -28,4 +28,4 @@ class MyProjectTemplateView(TemplateView):
             formset.save()
             return redirect(reverse_lazy("list"))
 
-        return self.render_to_response({'formset': formset})
+        return self.render_to_response({"formset": formset})
